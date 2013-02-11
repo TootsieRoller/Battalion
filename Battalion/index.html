@@ -1,0 +1,108 @@
+<!--	TODO LIST:
+			 ?	Layout like a mo-fo
+			 ?	Update individualistic code
+			 ?	Implement user interaction:
+			 ->	 ?	Initalization
+				 ?	Yell at my sister to do more artwork
+				 ?	Yell at my sister to do more artwork--again
+				 ?	Implement dynamic transportation
+				 ?	Interactive unit initalization
+				 ?	Idle animations
+				 ?	Attack animations
+				 ?	Unit data markup
+				 ?	penis
+			 ?	Complete up enemy datasheets
+			 ?	Implement cookies
+			 ?	Add uniqe enemies/animations
+			 ?	Desing creative levels and shit
+			 ?	Publish
+			 ?	???
+			 ?	Profit
+-->
+<!DOCTYPE HTML>
+<html>
+<!--[if !IE]> -->
+<head>
+	<link href="includes/style.css" rel="stylesheet" />
+	<title>Battalion - Twinsies</title>
+</head>
+<body>
+	<div id="container">
+		<div id="canvasHolder" style="display:inline;">
+			<div class="canvas" id="backCanvas" style="width:815px;height:665px;"></div>
+			<div class="canvas" id="levelCanvas" style="width:600px;height:600px;"></div>
+			<div class="canvas" id="unitCanvas" style="width:600px;height:600px;"></div>
+			<div class="canvas" id="statsCanvas" style="positon:absolute;top:650px;width:600px;height:60px;"></div>
+			<div class="canvas" id="avatarCanvas" style="positon:absolute;left:650px;width:210px;height:600px;"></div>
+			<div class="canvas" id="foreCanvas" style="width:815px;height:665px;"></div>
+		</div>
+	</div>
+	<ul id="mainMenu">
+		<div id="gameLogo">
+			<img src="Images/gameLogo.png" />
+			(but not really)
+		</div>
+		<li class="btnMenu" id="start" onclick="displayNext(this);">Start</li>
+			<ul style="overflow:auto;" id="levelSelect">
+				<li class="levelIcon" id="rand+blue+red">
+					?
+				</li>
+				<li class="levelIcon" id="0+red+blue">
+					Level 1
+				</li>
+				<li class="levelIcon" id="1+blue+red">
+					Level 2
+				</li>
+				<li class="levelIcon" id="2+red+blue">
+					Level 3
+				</li>
+				<li class="btnBack" onclick="backNav(this.parentNode);">Back</li>
+			</ul>
+		<br />
+		<li class="btnMenu" id="levelEdit" onclick="displayNext(this);">Level Editor</li>
+			<ul id="lvlEditor">
+				TBA
+				<li class="btnBack" onclick="backNav(this.parentNode);">Back</li>
+			</ul>
+		<br />
+		<li class="btnMenu" id="optionsBttn" onclick="displayNext(this);">Options</li>
+			<ul id="options">
+				<li class="btn" id="sound" onclick="sfxToggle(this);">SFX Off</li>
+				<br />
+				<br />
+				<li class="btn" onclick="displaySpeed(this);">Speed</li>
+					<div id="fps" style="display:none;" placehulder="30">
+					FPS: <input size="1" placehulder="30" onchange="if(this.value)fps=this.value;else fps=30;"><br />
+					Lower FPS (Frames per Second) makes the game run slower, but is less CUP intensive.<br />
+					Higher FPS makes the game run faster, but is more CPU intensive. <br />
+					Recomended range: <font culor="red">20 - 40</font>.
+					</div>
+				<br />
+				<br />
+				<li class="btnBack" onclick="backNav(this.parentNode);">Back</li>
+			</ul>
+		<br />
+		<li class="btnMenu" id="creditsBttn" onclick="displayNext(this);">Credits</li>
+		<div id="credits">
+			Credits to be writen at a later date.
+			<br />
+			<br />
+			<li class="btnBack" onclick="backNav(this.parentNode);">Back</li>
+		</div>
+	</ul>
+	<div id="gameHelpers">
+		<div id="frames"></div>
+		<div class="btnHelpers" id="menuButton" onclick="mainMenu();">Menu</div>
+		<div class="btnHelpers" id="endTurnBtn" onclick="endTurn();"><br />End Turn</div>
+		<div id="data"></div>
+	</div>
+</body>
+<script type="text/javascript" src="includes/images.js"></script>
+<script type="text/javascript" src="includes/dataRecords.js"></script>
+<script type="text/javascript" src="includes/unitRecords.js"></script>
+<script type="text/javascript" src="includes/moveUnits.js"></script>
+<script type="text/javascript" src="includes/core.js"></script>
+<script type="text/javascript" src="includes/levelDesign.js"></script>
+<![endif]-->
+<!--[if IE]><div align="center">You need <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a> to play this game. Get with the times crazy.<![endif]-->
+</html>
